@@ -12,7 +12,7 @@ const SimpleCounter: React.FC<{}> = () => {
     setCount(7);
   };
   return (
-    <div className="simple-counter">
+    <div className="demo-box">
       <h1>{count}</h1>
       <div>
         <button onClick={increment}>Increment</button>

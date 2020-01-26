@@ -3,6 +3,7 @@ import "./App.css";
 import SimpleCounter from "./components/SImpleCounter/SimpleCounter";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ComponentUsesViewport from "./components/ComponentUsesViewport/ComponentUsesViewport";
 
 function App() {
   return (
@@ -14,10 +15,12 @@ function App() {
               <li>
                 <Link to="/simple-counter">Simple Counter using Hooks</Link>
               </li>
-              {/* <li>
-                <Link to="/about">About</Link>
-              </li>
               <li>
+                <Link to="/component-uses-viewport-single">
+                  Single use of useViewport hook
+                </Link>
+              </li>
+              {/* <li>
                 <Link to="/users">Users</Link>
               </li> */}
             </ul>
@@ -28,6 +31,9 @@ function App() {
           <Switch>
             <Route path="/simple-counter">
               <SimpleCounter />
+            </Route>
+            <Route path="/component-uses-viewport-single">
+              <ComponentUsesViewport />
             </Route>
             {/* <Route path="/users">
               <Users />
