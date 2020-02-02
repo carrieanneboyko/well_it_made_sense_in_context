@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
-import SimpleCounter from "./components/SImpleCounter/SimpleCounter";
+import SimpleCounter from "./components/SimpleCounter/SimpleCounter";
+import SimpleCounterWithHook from "./components/SimpleCounter/SimpleCounterWithHook";
+import ThreeSimpleCounters from "./components/SimpleCounter/ThreeSimpleCounters";
+import ThreeConnectedCounters from "./components/SimpleCounter/ThreeConnectedCounters";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComponentUsesViewport from "./components/ComponentUsesViewport/ComponentUsesViewport";
@@ -26,6 +29,21 @@ function App() {
                   Multiple uses of useViewport hook
                 </Link>
               </li>
+              <li>
+                <Link to="/simple-counter-with-custom-hook">
+                  Simple Counter using Custom Hook
+                </Link>
+              </li>
+              <li>
+                <Link to="/three-simple-counters">
+                  Three independent counters
+                </Link>
+              </li>
+              <li>
+                <Link to="/three-connected-counters">
+                  Three connected counters
+                </Link>
+              </li>
               {/* <li>
                 <Link to="/users">Users</Link>
               </li> */}
@@ -43,6 +61,15 @@ function App() {
             </Route>
             <Route path="/component-uses-viewport-multiple">
               <ComponentUsesMultipleViewports />
+            </Route>
+            <Route path="/simple-counter-with-custom-hook">
+              <SimpleCounterWithHook />
+            </Route>
+            <Route path="/three-simple-counters">
+              <ThreeSimpleCounters />
+            </Route>
+            <Route path="/three-connected-counters">
+              <ThreeConnectedCounters />
             </Route>
             {/* <Route path="/users">
               <Users />
