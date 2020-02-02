@@ -4,6 +4,7 @@ import SimpleCounter from "./components/SImpleCounter/SimpleCounter";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComponentUsesViewport from "./components/ComponentUsesViewport/ComponentUsesViewport";
+import ComponentUsesMultipleViewports from "./components/ComponentUsesViewport/ComponentUsesMultipleViewports";
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
                   Single use of useViewport hook
                 </Link>
               </li>
+              <li>
+                <Link to="/component-uses-viewport-multiple">
+                  Multiple uses of useViewport hook
+                </Link>
+              </li>
               {/* <li>
                 <Link to="/users">Users</Link>
               </li> */}
@@ -34,6 +40,9 @@ function App() {
             </Route>
             <Route path="/component-uses-viewport-single">
               <ComponentUsesViewport />
+            </Route>
+            <Route path="/component-uses-viewport-multiple">
+              <ComponentUsesMultipleViewports />
             </Route>
             {/* <Route path="/users">
               <Users />

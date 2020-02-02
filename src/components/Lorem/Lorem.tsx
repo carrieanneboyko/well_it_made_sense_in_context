@@ -13,8 +13,8 @@ Fusce nisi turpis, aliquet et semper sit amet, dignissim in ipsum. Integer facil
 const Lorem = () => {
   return (
     <div>
-      {lorumsrc.split("\n").map(line => (
-        <p key={line.substring(0, 10)}>{line}</p>
+      {lorumsrc.split("\n").map((line: string, index: number) => (
+        <p key={`${line.substring(0, 10)}-${index}`}>{line}</p>
       ))}
     </div>
   );

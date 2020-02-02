@@ -1,8 +1,9 @@
 .App {
 }
 
-.demo-box {
+.viewport-box {
   margin: 2px;
   border: 1px solid black;
   padding: 2px;
+  font-size: 24px;
 }
