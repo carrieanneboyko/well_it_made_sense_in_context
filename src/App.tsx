@@ -8,6 +8,8 @@ import ThreeConnectedCounters from "./components/SimpleCounter/ThreeConnectedCou
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ComponentUsesViewport from "./components/ComponentUsesViewport/ComponentUsesViewport";
 import ComponentUsesMultipleViewports from "./components/ComponentUsesViewport/ComponentUsesMultipleViewports";
+import OverloadedContextComponent from "./components/OverloadedContextComponent/OverloadedContextComponent";
+import SeperatedContextComponent from "./components/OverloadedContextComponent/SeperatedContextComponent";
 
 function App() {
   return (
@@ -44,6 +46,12 @@ function App() {
                   Three connected counters
                 </Link>
               </li>
+              <li>
+                <Link to="/overloaded-context">Overloaded Context</Link>
+              </li>
+              <li>
+                <Link to="/seperated-context">Seperated Contexts</Link>
+              </li>
               {/* <li>
                 <Link to="/users">Users</Link>
               </li> */}
@@ -70,6 +78,12 @@ function App() {
             </Route>
             <Route path="/three-connected-counters">
               <ThreeConnectedCounters />
+            </Route>
+            <Route path="/overloaded-context">
+              <OverloadedContextComponent />
+            </Route>
+            <Route path="/seperated-context">
+              <SeperatedContextComponent />
             </Route>
             {/* <Route path="/users">
               <Users />
